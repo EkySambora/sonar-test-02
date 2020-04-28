@@ -25,12 +25,15 @@
     width: 500px;
     height: 500px;
     background: white;
-    padding: 40px 0;
+    padding: 40px 0 75px 0;
     position: relative;
+}
+.container .box header{
+    overflow: hidden;
 }
 .container .box .best{
     position: absolute;
-        top: 62px;
+        top: 72px;
     font-size: 19px;
     font-weight: bold;
     font-family:  "Ghotam Medium";
@@ -42,10 +45,18 @@
     padding-right: 35px;
     border-radius: 0 25px 25px 0;
     text-transform: uppercase;
+    z-index: 1;
+    cursor: pointer;
 }
+.container .box header{
+    margin-top: 30px;
+}
+
 .container .box header img{
     width: 100%;
     border-radius: 20px;
+    transform: scale(1.2);
+    margin-top: 11px;
 }
 .container .box .cov-desc {
     padding: 20px;
