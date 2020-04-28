@@ -68,8 +68,9 @@
     overflow: hidden;
 }
 
-.cover-popover .left img{
+.cover-popover .left .slider .image img{
     width: 100%;
+    object-fit: contain;
     transform: scale(1.5);
 }
 
