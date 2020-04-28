@@ -40,31 +40,50 @@ images[1].style.display = "none";
 images[2].style.display = "none";
 
 //slider
-
+indicator[0].style.background = "#123";
 var counter = 0;
 var newCountdown = setInterval(function(){
-  console.log(counter);
   counter++
+
     if(counter === 0) {
         images[0].style.display = "block";
         images[1].style.display = "none";
         images[2].style.display = "none";
+
+        indicator[0].style.background = "#123";
+        indicator[1].style.background = "#fff";
+        indicator[2].style.background = "#fff";
+
+        
     }
     else if(counter === 1) {
         images[0].style.display = "none";
         images[1].style.display = "block";
         images[2].style.display = "none";
+
+        indicator[0].style.background = "#fff";
+        indicator[1].style.background = "#123";
+        indicator[2].style.background = "#fff";
     }
     else if(counter === 2) {
         images[2].style.height = "300px";
         images[0].style.display = "none";
         images[1].style.display = "none";
         images[2].style.display = "block";
+
+        indicator[0].style.background = "#fff";
+        indicator[1].style.background = "#fff";
+        indicator[2].style.background = "#123";
     }
     else if(counter === 3) {
         images[0].style.display = "block";
         images[1].style.display = "none";
         images[2].style.display = "none";
+
+        indicator[0].style.background = "#123";
+        indicator[1].style.background = "#fff";
+        indicator[2].style.background = "#fff";
+
         counter = 0
         // clearInterval(newCountdown);
     }
