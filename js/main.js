@@ -1,24 +1,29 @@
-var coverAll = document.querySelector('.cover-all')
-var showPopover = document.querySelector('#showPopover')
-var tabs = document.querySelectorAll('.tabs')
-var valTab1 = document.querySelector('.tab-1')
-var valTab2 = document.querySelector('.tab-2')
+let coverAll = document.querySelector('.cover-all')
+let showPopover = document.querySelector('#showPopover')
+let tabs = document.querySelectorAll('.tabs')
+let valTab1 = document.querySelector('.tab-1')
+let valTab2 = document.querySelector('.tab-2')
+let pseudo = document.querySelector('.pseudo')
 
 coverAll.style.display = 'none'
-
-showPopover.onclick = function(){
-    coverAll.style.display = 'flex'
-}
 tabs[0].classList.add('active')
 valTab2.style.display = 'none'
-tabs.forEach(tab => tab.addEventListener('click', klik));
+
+tabs.forEach(tab => tab.addEventListener('click', activeTab));
+
+showPopover.addEventListener("click", function(){
+    coverAll.style.display = 'flex'
+})
 
 
-function klik(e){
+pseudo.addEventListener("click", function() {
+    coverAll.style.display = 'none'
+}) 
+
+function activeTab(e){
     tabs.forEach(tab=>tab.classList.remove('active'))
     e.target.classList.toggle('active');
-    // console.log(e.target.dataset.tab);
-    // console.log(e);
+
     let dataSet = e.target.dataset.tab
     if(dataSet == 'two'){
         valTab2.style.display = 'block'
@@ -27,12 +32,5 @@ function klik(e){
         valTab2.style.display = 'none'
         valTab1.style.display = 'block'
     }
-    
-    // if(e.target.innerHTML == 'data completeness'){
-    //     tab.classList.add('d-none');
-    //     tab2.classList.remove('d-none')
-    // }else {
-    //     tab.classList.remove('d-none');
-    //     tab2.classList.remove('d-none')
-    // }
+
 }
