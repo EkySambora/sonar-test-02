@@ -87,4 +87,9 @@ var newCountdown = setInterval(function(){
         counter = 0
         // clearInterval(newCountdown);
     }
-}, 3000);
+}, 1000);
+
+// indicator.forEach((img, i) => img.addEventListener("click", (e)=>{
+//     indicator[i].style.background = "#123";
+//     // counter = i
+// }))

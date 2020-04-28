@@ -96,6 +96,11 @@
     background-repeat: no-repeat;
     background-position: 19px 8px;
     width: 40px;
+    transition: box-shadow .5s;
+}
+
+.cov-price .price div:nth-child(1):hover{
+    box-shadow: -1px 4px 6px -4px rgba(0,0,0,0.75);
 }
 
 .cov-price .price div:nth-child(2){

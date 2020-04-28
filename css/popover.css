@@ -24,6 +24,7 @@
     position: fixed;
         top: 0;
     width: 100%;
+    transition: all 2s;
 }
 
 .cover-all .pseudo {
@@ -67,6 +68,7 @@
 .cover-popover .left .slider{
     padding-top: 220px;
     overflow: hidden;
+    transition: all 2s;
 }
 
 .cover-popover .left .slider .image img{
@@ -90,6 +92,7 @@
     margin-right: 10px;
     /* padding: 10px; */
     border: 1px solid #919191;
+    transition: all 2s;
 }
 
 .cover-popover .right{
@@ -142,6 +145,7 @@
     border-bottom: 3px solid #fbe55a;
     font-weight: bold;
     color: #464646;
+    transition: color .5s;
 }
 .right .middle .desc {
     border-bottom: 2px solid #ededed;
