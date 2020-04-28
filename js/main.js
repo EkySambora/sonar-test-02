@@ -7,18 +7,23 @@ let pseudo = document.querySelector('.pseudo');
 let images = document.querySelectorAll('.image img');
 let indicator = document.querySelectorAll('.indicator span');
 
-coverAll.style.display = 'none';
+coverAll.classList.add('display-none')
 tabs[0].classList.add('active');
 valTab2.style.display = 'none';
 
 tabs.forEach(tab => tab.addEventListener('click', activeTab));
 
 showPopover.addEventListener("click", function(){
-    coverAll.style.display = 'flex';
+    // coverAll.style.display = 'flex';
+    coverAll.classList.add('display-flex')
+    coverAll.classList.remove('display-none')
 })
 
 pseudo.addEventListener("click", function() {
-    coverAll.style.display = 'none';
+    // coverAll.style.animation = "move-down 0.3s linear 1"
+    // coverAll.style.display = 'none';
+    coverAll.classList.add('display-none')
+    coverAll.classList.remove('display-flex')
 }) 
 
 function activeTab(e){
@@ -44,7 +49,13 @@ indicator[0].style.background = "#123";
 var counter = 0;
 var newCountdown = setInterval(function(){
   counter++
-
+    // images.forEach((e, i) => {
+    //     if(counter === i) {
+    //         images[i].style.display = "block";
+    //     }else{
+    //         images[i].style.display = "none";
+    //     }
+    // })
     if(counter === 0) {
         images[0].style.display = "block";
         images[1].style.display = "none";

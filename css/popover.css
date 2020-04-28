@@ -14,6 +14,84 @@
         url("/font/gotham-light.svg") format("svg");
 }
 
+@-webkit-keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+@-webkit-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes move-up {
+    from {
+      bottom: 200px;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  @-moz-keyframes move-up {
+    from {
+      bottom: 200px;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  @-ms-keyframes move-up {
+    from {
+      bottom: 200px;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+
+  @-webkit-keyframes move-down {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: 200px;
+    }
+  }
+  
+.cover-all.display-none{
+    display: none !important;
+}
+
+.cover-all.display-flex{
+    display: flex !important;
+}
+.add-animation-fade-out{
+    animation: fade-out 0.3s linear 1;
+    display: none;
+}
 .cover-all{
     display: flex;
     align-items: center;
@@ -24,7 +102,6 @@
     position: fixed;
         top: 0;
     width: 100%;
-    transition: all 2s;
 }
 
 .cover-all .pseudo {
@@ -44,6 +121,7 @@
     position: relative;
     z-index: 101;
     /* transition: all 2s; */
+    animation: move-up 0.3s linear 1;
 }
 
 .cover-popover .best{
