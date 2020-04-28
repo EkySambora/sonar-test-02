@@ -36,12 +36,13 @@
     background: #494949;
 }
 .cover-popover{
-    width: 950px;
+    width: 900px;
     background: #fff;
     border-radius: 20px 20px;
     display: flex;
     position: relative;
     z-index: 101;
+    /* transition: all 2s; */
 }
 
 .cover-popover .best{
