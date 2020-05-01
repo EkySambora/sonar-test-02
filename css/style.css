@@ -1,16 +1,16 @@
 *{padding: 0;margin: 0;}
 @font-face {
     font-family: 'Ghotam Medium';
-    src:  url('/font/gotham-medium.eot') format('ttf');
-    src: url("/font/gotham-medium.woff") format("woff"),
-        url("/font/gotham-medium.svg") format("svg");
+    src:  url('../font/gotham-medium.eot') format('ttf');
+    src: url("../font/gotham-medium.woff") format("woff"),
+        url("../font/gotham-medium.svg") format("svg");
 }
 @font-face {
     font-family: "Ghotam Light";
-    src: url("/font/gotham-light.eot");
-    src: url("/font/gotham-light.woff") format("woff"),
+    src: url("../font/gotham-light.eot");
+    src: url("../font/gotham-light.woff") format("woff"),
         /* url("css/fonts/Harabara.otf") format("opentype"), */
-        url("/font/gotham-light.svg") format("svg");
+        url("../font/gotham-light.svg") format("svg");
 }
 .container{
     height: 100vh;
@@ -91,7 +91,7 @@
     border-top: 1px solid rgb(211, 211, 211);
     border-bottom: 1px solid rgb(211, 211, 211);
     border-left: 1px solid rgb(211, 211, 211);
-    background-image: url(/assets/quicklook.svg);
+    background-image: url(../assets/quicklook.svg);
     background-size: 25px 25px;
     background-repeat: no-repeat;
     background-position: 19px 8px;
