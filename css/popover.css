@@ -318,7 +318,7 @@
 }
 
 .buy-now div:nth-child(1){
-    background-image: url(/assets/cart.svg);
+    background-image: url(../assets/cart.svg);
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: 20px 12px;
