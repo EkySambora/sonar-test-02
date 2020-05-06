@@ -245,7 +245,7 @@
 
 .right .middle .desc ul li::before{
     content: " ";
-    background-image: url(/assets/check.svg);
+    background-image: url(../assets/check.svg);
     background-size: 19px 19px;
     background-repeat: no-repeat;
     width: 19px;
@@ -302,7 +302,7 @@
 
 .right .bottom .shipping-desc p:before{
     content: " ";
-    background-image: url(/assets/check.svg);
+    background-image: url(../assets/check.svg);
     background-size: 19px 19px;
     background-repeat: no-repeat;
     width: 19px;
