@@ -1,0 +1,349 @@
+*{padding:0;margin: 0;}
+
+@font-face {
+    font-family: 'Ghotam Medium';
+    src:  url('../font/gotham-medium.eot') format('ttf');
+    src: url("../font/gotham-medium.woff") format("woff"),
+        url("../font/gotham-medium.svg") format("svg");
+}
+@font-face {
+    font-family: "Ghotam Light";
+    src: url("../font/gotham-light.eot");
+    src: url("../font/gotham-light.woff") format("woff"),
+        /* url("css/fonts/Harabara.otf") format("opentype"), */
+        url("../font/gotham-light.svg") format("svg");
+}
+
+@-webkit-keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+@-webkit-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes move-up {
+    from {
+      bottom: 200px;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  @-moz-keyframes move-up {
+    from {
+      bottom: 200px;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  @-ms-keyframes move-up {
+    from {
+      bottom: 200px;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+
+  @-webkit-keyframes move-down {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: 200px;
+    }
+  }
+  
+.cover-all.display-none{
+    display: none !important;
+}
+
+.cover-all.display-flex{
+    display: flex !important;
+}
+.add-animation-fade-out{
+    animation: fade-out 0.3s linear 1;
+    display: none;
+}
+.cover-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background: #494949; */
+    z-index: 1111;
+    position: fixed;
+        top: 0;
+    width: 100%;
+}
+
+.cover-all .pseudo {
+    z-index: 100;
+    background: red;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: #494949;
+}
+.cover-popover{
+    width: 900px;
+    background: #fff;
+    border-radius: 20px 20px;
+    display: flex;
+    position: relative;
+    z-index: 101;
+    /* transition: all 2s; */
+    animation: move-up 0.3s linear 1;
+}
+
+.cover-popover .best{
+    position: absolute;
+        top: 70px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Ghotam Medium";
+    background: #fbe55a;
+    color: #424242;
+    padding: 10px 22px;
+    border-radius: 0 25px 25px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cover-popover .left{
+    padding: 50px 0;
+    width: 50%;
+}
+
+.cover-popover .left .slider{
+    padding-top: 220px;
+    overflow: hidden;
+    transition: all 2s;
+}
+
+.cover-popover .left .slider .image img{
+    width: 100%;
+    object-fit: contain;
+    transform: scale(1.5);
+}
+
+.cover-popover .left .slider .indicator{
+    position: absolute;
+        top: 85%;
+        left: 18%;
+    display: flex;
+}
+
+.cover-popover .left .slider .indicator span{
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50% 50%;
+    margin-right: 10px;
+    /* padding: 10px; */
+    border: 1px solid #919191;
+    transition: all 2s;
+}
+
+.cover-popover .right{
+    width: 50%;
+    padding: 70px;
+}
+
+.right .top .title {
+    margin-bottom: 20px;
+    color: #464646;;
+}
+
+.right .top .title h3{
+    font-size: 25px;
+    font-family: "Ghotam Medium";
+}
+.right .top .title p{
+    font-size: 25px;
+    font-family: "Ghotam Medium";
+}
+
+.right .top{
+    margin-bottom: 25px;
+}
+
+.right .top .desc p{
+    font-size: 20px;
+    font-family: "Ghotam Light";
+    color: #919191;
+    margin-bottom: 30px;
+}
+
+
+.right .middle .option ul{
+    display: flex;
+    list-style: none;
+    border-bottom: 2px solid #ededed;
+    font-family: "Ghotam Medium";
+}
+.right .middle .option ul li{
+    /* margin-bottom: 10px; */
+    margin-right: 15px;
+    cursor: pointer;
+    padding-bottom: 5px;
+    color: #d1d1d1;
+}
+
+.right .middle .option ul li.active{
+    /* padding-bottom: 12px; */
+    border-bottom: 3px solid #fbe55a;
+    font-weight: bold;
+    color: #464646;
+    transition: color .5s;
+}
+.right .middle .desc {
+    border-bottom: 2px solid #ededed;
+    padding: 20px 0;
+    font-family: "Ghotam Light";
+    color: #919191;
+}
+.right .middle .desc ul{
+    /* list-style-image: url(/assets/check.svg);
+    list-style-position: inside; */
+    list-style: none;
+    position: relative;
+}
+
+.right .middle .desc ul li{
+    margin-bottom: 10px;
+    margin-left: 35px;
+}
+
+.right .middle .desc ul li::before{
+    content: " ";
+    background-image: url(../assets/check.svg);
+    background-size: 19px 19px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left:0;
+}
+
+.right .bottom{
+    margin-bottom: 30px;
+}
+
+.right .bottom .choose {
+    padding:20px 0;
+    border-bottom: 2px solid #ededed;
+    font-family: "Ghotam Medium";
+    color: #464646;
+}
+
+.right .bottom .choose .colors{
+    display: flex;
+    margin-top: 15px;
+}
+
+.right .bottom .choose .colors span{
+    width: 12px;
+    height: 12px;
+    background: #919191;
+    border-radius: 50% 50%;
+    margin-right: 10px;
+    /* padding: 10px; */
+    border: 1px solid #919191;
+}
+
+
+.right .bottom .choose .colors span:nth-child(2){
+    background: #c55959;
+}
+
+.right .bottom .choose .colors span:nth-child(3){
+    background: #d8b56a;
+}
+
+.right .bottom .shipping-desc{
+    padding:20px 0;
+    border-bottom: 2px solid #ededed;
+    position: relative;
+}
+.right .bottom .shipping-desc p{
+    margin-left: 35px;
+    font-family: "Ghotam Light"; 
+    color: #919191;
+}
+
+.right .bottom .shipping-desc p:before{
+    content: " ";
+    background-image: url(../assets/check.svg);
+    background-size: 19px 19px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left:0;
+}
+
+.buy-now{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.buy-now div:nth-child(1){
+    background-image: url(../assets/cart.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 20px 12px;
+    width: 20px;
+    height: 19px;
+    padding: 12px;
+    padding-right: 25px;
+    border-radius: 25px 0 0 25px;
+}
+
+.buy-now div:nth-child(2){
+    padding: 12px 25px 12px 12px;
+    border-left: 1px solid #fff;
+    border-radius: 0 25px 25px 0;
+    font-family: "Ghotam Medium";
+    line-height: 19px;
+    font-size: 15px;
+}
+
+.buy-now div:nth-child(2):before{
+    content: "BUY NOW";
+}
+
+.buy-now div{
+    cursor: pointer;
+    background-color: #3d3d3d;
+    color: #fff;
+}

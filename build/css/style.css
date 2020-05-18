@@ -1,0 +1,124 @@
+*{padding: 0;margin: 0;}
+@font-face {
+    font-family: 'Ghotam Medium';
+    src:  url('../font/gotham-medium.eot') format('ttf');
+    src: url("../font/gotham-medium.woff") format("woff"),
+        url("../font/gotham-medium.svg") format("svg");
+}
+@font-face {
+    font-family: "Ghotam Light";
+    src: url("../font/gotham-light.eot");
+    src: url("../font/gotham-light.woff") format("woff"),
+        /* url("css/fonts/Harabara.otf") format("opentype"), */
+        url("../font/gotham-light.svg") format("svg");
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(221, 221, 221);
+}
+.container .box {
+    border: none;
+    border-radius: 20px 20px;
+    width: 500px;
+    height: 500px;
+    background: white;
+    padding: 40px 0 75px 0;
+    position: relative;
+}
+.container .box header{
+    overflow: hidden;
+}
+.container .box .best{
+    position: absolute;
+        top: 72px;
+    font-size: 19px;
+    font-weight: bold;
+    font-family:  "Ghotam Medium";
+    background: #fbe55a;
+    color: #424242;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left:40px;
+    padding-right: 35px;
+    border-radius: 0 25px 25px 0;
+    text-transform: uppercase;
+    z-index: 1;
+    cursor: pointer;
+}
+.container .box header{
+    margin-top: 30px;
+}
+
+.container .box header img{
+    width: 100%;
+    border-radius: 20px;
+    transform: scale(1.2);
+    margin-top: 11px;
+}
+.container .box .cov-desc {
+    padding: 20px;
+}
+
+.box .cov-desc h3{
+    font-family: "Ghotam Medium";
+    font-size: 25px;
+    margin-bottom: 7px;
+    color: #464646;
+}
+
+.box .cov-desc p{
+    font-size: 20px;
+    color: #878787;
+    font-family:  "Ghotam Light";
+}
+
+.box .cov-price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 15px;
+}   
+.box .cov-price .price{
+    margin-right: 25px;
+    display: flex;
+}   
+.cov-price .price div:nth-child(1){
+    border-radius: 25px 0 0 25px;
+    cursor: pointer;
+    border-top: 1px solid rgb(211, 211, 211);
+    border-bottom: 1px solid rgb(211, 211, 211);
+    border-left: 1px solid rgb(211, 211, 211);
+    background-image: url(../assets/quicklook.svg);
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: 19px 8px;
+    width: 40px;
+    transition: box-shadow .5s;
+}
+
+.cov-price .price div:nth-child(1):hover{
+    box-shadow: -1px 4px 6px -4px rgba(0,0,0,0.75);
+}
+
+.cov-price .price div:nth-child(2){
+    border-top: 1px solid rgb(211, 211, 211);
+    border-bottom: 1px solid rgb(211, 211, 211);
+    border-left: 1px solid rgb(211, 211, 211);
+    border-right: 1px solid rgb(211, 211, 211);
+    border-radius: 0 25px 25px 0;
+    color: #878787;
+    font-family: "Ghotam Medium";
+    font-size: 19px;
+    letter-spacing: 0;
+    line-height: -1px;
+}
+.cov-price .price div{
+    padding: 10px;
+}
+
+/* popover */
+
+
